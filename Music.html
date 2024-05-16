@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Meghwal</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('PHOTOS/pexels-daniel-reche-718241-3721941.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px); /* Apply a blur effect */
+    }
+    .player {
+        max-width: 300px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better contrast */
+        padding: 20px;
+        border-radius: 10px; /* Add some rounded corners */
+    }
+    audio {
+        width: 100%;
+    }
+    .circle-img {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto 20px;
+        animation: rotate 10s linear infinite; /* Apply rotation animation */
+    }
+    .circle-img img {
+        width: 100%;
+        height: auto;
+    }
+    .song-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: black; /* Change the color of the song title for better visibility */
+    }
+    .select-music-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    .select-music-button:hover {
+        background-color: #45a049; /* Darker green */
+    }
+    
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="player">
+    <h2>Aman Meghwal</h2>
+    <div class="circle-img">
+        <img src="E:\WEB DEVLOPMENT\PHOTOS\sidhu-moose-wala-hd-wallpaper.jpg" alt="Artist Image">
+    </div>
+    <div class="song-title">We Rollin X Drippy - Shubh - Sidhu Moose Wala</div>
+    <audio controls>
+        <source src="E:\WEB DEVLOPMENT\SONG\Music\We Rollin X Drippy - Shubh _ Sidhu Moose Wala _ Mashup(MP3_160K).mp3
+        " type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <input type="file" accept="audio/mp3" id="file-input" style="display: none;">
+    <button class="select-music-button" onclick="document.getElementById('file-input').click()">Select Music</button>
+</div>
+
+</body>
+</html>
